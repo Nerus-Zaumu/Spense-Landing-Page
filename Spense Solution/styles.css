@@ -1,87 +1,291 @@
+html,
 body{
     margin: 0;
+    padding: 0;
     width: 100%;
-    border: 0;
+    height: 100%;
+
 }
 
 .container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat();
+}
+.head{
     width: 100%;
+    text-align: center;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+.navbar{
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.label{
+    width: 20%;
+    text-align: center;
     margin: auto;
+}
+.label label{
+    color: black;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.middle{
+    width: 55%;
+    justify-content: center;
+}
+
+.middle ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.middle ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+.right{
+    margin: auto;
+    width: 20%;
+}
+.right a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+.right button, .left button{
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-family: sans-serif;
+    background-color: black;
+    border-radius: 4px;
+    border-width: 0;
+}
+
+#hidden-menu{
+    display: flex;
+    flex-direction: column;
+    margin-left: 83.5%;
+    width: fit-content;
+    background-color: whitesmoke;
+    height: 0px;
+    visibility: hidden;
+}
+
+
+#hidden-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hidden-menu ul li{
+    list-style-type: none;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+#hidden-menu a{
+    margin: auto;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+#hidden-menu button{
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-family: sans-serif;
+    background-color: black;
+    border-radius: 4px;
+    border-width: 0;
+}
+
+span{
+    width: 5vw;
+    margin: auto;
+    visibility: hidden;
+}
+
+@media(max-width: 716px){
+    span{
+        visibility: visible;
+    }
+    .middle,
+    .right{
+        visibility: hidden;
+    }
+}
+
+
+.page-body{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+}
+
+.page-body .left{
+    margin-left: 7vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin: auto; */
+    width: 45%;
+}
+
+.page-body .left ul{
+    display: flex;
+    flex-direction: column;
+    list-style-image: url('../Spense Solution/images/new_checkmark.jpg');
+}
+.page-body .left ul li{
+    margin-top: 2px;
+}
+
+.left input{
+    width: 150px;
+    height: 35px;
+    border: 1px solid;
+    border-color: #c7c4c4;
+    border-radius: 2%;
+    box-shadow: 1px 1px #c7c4c4;
+}
+
+.page-body .right{
+    width: 45%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.page-body .right img{
+    width: 60%;
+    margin-left: 3.5vw;
+}
+
+@media(max-width: 717px){
+    .page-body{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #hidden-menu{
+        visibility: hidden;
+    }
+}
+
+.partners{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    /* justify-content: center; */
+}
+
+.partners img{
+    width: 8.8%;
+    margin-left: 1.5vw;
+    margin-top: auto;
+}
+
+.escrow{
+    background-color: whitesmoke;
+    width: 77.5vw;
+    margin-left: 6.5vw;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+.escrow .left-side{
+    margin-top: 5vw;
+    margin-left: 5vw;
+    width: 40vw;
+}
+.escrow .left-side h2{
+    font-family: sans-serif;
+}
+.escrow .left-side p{
+    font-family: sans-serif;
+}
+.escrow .left-side a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: black;
+}
+
+.escrow .right-side{
+    width: 40vw;
+    margin: auto;
+}
+.escrow .right-side img{
+   width: 40vw;
+}
+
+.bottom-section{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    font-family: sans-serif;
+}
+.bottom-left{
+    width: 50vw;
+    margin: auto;
+}
+.bottom-left img{
+    width: 50vw;
+}
+.bottom-right{
+    margin: auto;
+    width: 50vw;
+}
+.bottom-right a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer{
+    width: 100vw;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
     display: flex;
     flex-direction: row;
 }
 
-.topper{
-    position: fixed;
-    background-color: black;
-    width: 100%;
-    text-align: center;
+.footer div{
+    width: 20vw;
 }
 
-.topper p{
+.footer .one{
+    margin-left: 4.5vw;
+}
+
+.footer a{
+    text-decoration: none;
     color: white;
     font-family: sans-serif;
 }
 
-.top-container{
-    width: 85%;
-    margin: auto;
-    background-color: whitesmoke;
+.footer ul{
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
+    flex-direction: column;
+    text-align: center;
 }
-
-.nav-bar{
-    height: 50px;
-}
-
-.label{
-    position: relative;
-    top: 40%;
-}
-
-.mid-items{
-    position: absolute;
-    left: 40%;
-}
-.right{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    left: 80%;
-}
-
-.label label{
-    font-weight: bold;
-    float: left;
-}
-
-.mid-items ul{
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-}
-.mid-items ul li{
+.footer ul li{
     list-style-type: none;
-    margin-left: 15px;
-}
-
-.right a{
-    text-decoration: none;
-    color: black;
-    margin-top: 15px;
-}
-
-.right button{
-    color: white;
-    background-color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    border-width: 0;
-    width: 100px;
-    height: 40px;
-    margin-left: 30px;
     margin-top: 5px;
-    
+}
+
+.footer div label{
+    font-weight: bold;
 }
